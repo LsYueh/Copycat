@@ -43,6 +43,8 @@ class Program
 
     private static int RunOptions(Options opts)
     {
+        VersionInfo();
+        
         if (!opts.Layout!.Exists)
         {
             Console.Error.WriteLine($"File not found: {opts.Layout.FullName}");
@@ -71,5 +73,20 @@ class Program
     private static int HandleParseError(IEnumerable<Error> errors)
     {
         return errors.Any(e => e is HelpRequestedError or VersionRequestedError) ? 0 : 1;
+    }
+
+    public static void VersionInfo(Version? appVersion = null, string? libVersion = null)
+    {
+        appVersion ??= System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
+        libVersion ??= GetThePicture.Version.File;
+
+        Console.WriteLine();
+        Console.WriteLine("================================");
+        Console.WriteLine("          Version Info          ");
+        Console.WriteLine("================================");
+        Console.WriteLine($"  App Version : {appVersion}");
+        Console.WriteLine($"  Lib Version : {libVersion}");
+        Console.WriteLine("================================");
+        Console.WriteLine();
     }
 }
