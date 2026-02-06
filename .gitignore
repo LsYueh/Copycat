@@ -1,0 +1,39 @@
+# =========================
+# Build outputs
+# =========================
+bin/
+obj/
+*.pdb
+*.log
+
+# =========================
+# Visual Studio / IDE
+# =========================
+.vs/
+.idea/
+*.user
+*.suo
+*.userprefs
+
+# =========================
+# OS junk
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# NuGet
+# =========================
+*.nupkg
+*.snupkg
+packages/
+.nuget/
+
+# =========================
+# Test / Coverage
+# =========================
+TestResults/
+coverage/
+*.dotCover
+
+TestWorkSpace

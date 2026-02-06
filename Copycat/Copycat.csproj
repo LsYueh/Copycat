@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <AssemblyName>copycat</AssemblyName>
+
+    <!-- 主要版號 -->
+    <Version>1.0.1</Version>
+
+    <!-- Assembly / File version -->
+    <AssemblyVersion>1.0.1.0</AssemblyVersion>
+    <FileVersion>1.0.1.0</FileVersion>
+
+    <!-- NuGet 用 -->
+    <PackageVersion>1.0.1</PackageVersion>
+
+    <InformationalVersion>1.0.1</InformationalVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="GetThePicture">
+      <HintPath>lib\GetThePicture.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommandLineParser" Version="2.9.1" />
+  </ItemGroup>
+
+</Project>
